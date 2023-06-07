@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Select } from "antd";
 import { Modal } from "antd";
+import logo from "../assets/logo.jpg"
 import useWeb3Provider from "./hooks/useWeb3Provider";
 
 const { Option } = Select;
@@ -102,7 +103,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-indigo-600">
+    <header className="bg-indigo-500">
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           <div onClick={goToHome} className="cursor-pointer">

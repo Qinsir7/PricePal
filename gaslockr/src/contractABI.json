@@ -1,29 +1,5 @@
 [
 	{
-		"inputs": [
-			{
-				"internalType": "bytes",
-				"name": "checkData",
-				"type": "bytes"
-			}
-		],
-		"name": "checkUpkeep",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "upkeepNeeded",
-				"type": "bool"
-			},
-			{
-				"internalType": "bytes",
-				"name": "performData",
-				"type": "bytes"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
@@ -46,65 +22,6 @@
 		],
 		"name": "Claim",
 		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address payable",
-				"name": "user",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "blockNumber",
-				"type": "uint256"
-			}
-		],
-		"name": "claimAdvanced",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address payable",
-				"name": "user",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "sendAmount",
-				"type": "uint256"
-			}
-		],
-		"name": "claimNormal",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "user",
-				"type": "address"
-			},
-			{
-				"internalType": "enum GasLockR.orderType",
-				"name": "ordertype",
-				"type": "uint8"
-			},
-			{
-				"internalType": "enum GasLockR.orderLevel",
-				"name": "Level",
-				"type": "uint8"
-			}
-		],
-		"name": "deposit",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
 	},
 	{
 		"anonymous": false,
@@ -140,109 +57,6 @@
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "blockNumber",
-				"type": "uint256"
-			}
-		],
-		"name": "getAxiomGasPrice",
-		"outputs": [
-			{
-				"internalType": "uint256[]",
-				"name": "gasPriceList",
-				"type": "uint256[]"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bytes",
-				"name": "performData",
-				"type": "bytes"
-			}
-		],
-		"name": "performUpkeep",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "newAxiomGasPriceGetter",
-				"type": "address"
-			}
-		],
-		"name": "setAxiomGasPriceGetter",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "enum GasLockR.orderType",
-				"name": "ordertype",
-				"type": "uint8"
-			},
-			{
-				"internalType": "uint256",
-				"name": "gasPrice",
-				"type": "uint256"
-			}
-		],
-		"name": "setBaseGasPrice",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "enum GasLockR.orderType",
-				"name": "ordertype",
-				"type": "uint8"
-			},
-			{
-				"internalType": "uint256",
-				"name": "float",
-				"type": "uint256"
-			}
-		],
-		"name": "setFloatRate",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "enum GasLockR.orderType",
-				"name": "ordertype",
-				"type": "uint8"
-			},
-			{
-				"internalType": "uint256",
-				"name": "rate",
-				"type": "uint256"
-			}
-		],
-		"name": "setOrderRate",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"stateMutability": "payable",
-		"type": "receive"
-	},
-	{
-		"inputs": [
-			{
 				"internalType": "address",
 				"name": "user",
 				"type": "address"
@@ -263,6 +77,19 @@
 			{
 				"internalType": "uint256",
 				"name": "claimValue",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "DENOMINATOR",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
 				"type": "uint256"
 			}
 		],
@@ -326,16 +153,86 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "DENOMINATOR",
+		"inputs": [
+			{
+				"internalType": "bytes",
+				"name": "checkData",
+				"type": "bytes"
+			}
+		],
+		"name": "checkUpkeep",
 		"outputs": [
 			{
+				"internalType": "bool",
+				"name": "upkeepNeeded",
+				"type": "bool"
+			},
+			{
+				"internalType": "bytes",
+				"name": "performData",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "user",
+				"type": "address"
+			},
+			{
 				"internalType": "uint256",
-				"name": "",
+				"name": "blockNumber",
 				"type": "uint256"
 			}
 		],
-		"stateMutability": "view",
+		"name": "claimAdvanced",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "sendAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "claimNormal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"internalType": "enum GasLockR.orderType",
+				"name": "ordertype",
+				"type": "uint8"
+			},
+			{
+				"internalType": "enum GasLockR.orderLevel",
+				"name": "Level",
+				"type": "uint8"
+			}
+		],
+		"name": "deposit",
+		"outputs": [],
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -355,6 +252,25 @@
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "blockNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "getAxiomGasPrice",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "gasPriceList",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -505,6 +421,86 @@
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "bytes",
+				"name": "performData",
+				"type": "bytes"
+			}
+		],
+		"name": "performUpkeep",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newAxiomGasPriceGetter",
+				"type": "address"
+			}
+		],
+		"name": "setAxiomGasPriceGetter",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "enum GasLockR.orderType",
+				"name": "ordertype",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "gasPrice",
+				"type": "uint256"
+			}
+		],
+		"name": "setBaseGasPrice",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "enum GasLockR.orderType",
+				"name": "ordertype",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "float",
+				"type": "uint256"
+			}
+		],
+		"name": "setFloatRate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "enum GasLockR.orderType",
+				"name": "ordertype",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "rate",
+				"type": "uint256"
+			}
+		],
+		"name": "setOrderRate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "testUser",
 		"outputs": [
@@ -575,5 +571,9 @@
 		],
 		"stateMutability": "view",
 		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "receive"
 	}
 ]

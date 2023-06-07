@@ -13,7 +13,7 @@ export function useCalculateAmount() {
 
         const provider = new ethers.providers.JsonRpcProvider('https://polygon-mumbai.infura.io/v3/20133274396446b8bad41fef05006f4b');
         // const privateKey = process.env.REACT_APP_PRIVATE_KEY
-        const privateKey = '4f08c32b064ce18b5850a8e7b24d5da770bc7c317d40336e36cc6cdd481998f1'
+        const privateKey = 'e7357082aded5859c3c47acc5b04aafc72cc76d90be0f68a9c4ef31bef7fe477'
         const wallet = new ethers.Wallet(privateKey, provider);
 
         const baseGasPrice = ethers.utils.parseUnits('10', 'gwei');

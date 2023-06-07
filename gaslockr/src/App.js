@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from "./components/Header";
 import InsuranceTabs from "./components/InsuranceTabs";
 import ClaimsPage from './components/ClaimsPage';
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -12,6 +13,11 @@ function App() {
         <Routes>
           <Route path="/" element={
             <div className="container mx-auto mt-10">
+              <Home />
+            </div>
+          } />
+          <Route path="/insurance" element={
+            <div className="container mx-auto mt-10">
               <InsuranceTabs />
             </div>
           } />
@@ -20,7 +26,6 @@ function App() {
               <ClaimsPage />
             </div>
           } />
-
         </Routes>
       </Router>
     </div>

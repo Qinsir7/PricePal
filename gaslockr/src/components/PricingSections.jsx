@@ -117,6 +117,7 @@ const PricingSections = ({ level }) => {
     try {
       const address = await signer.getAddress();
       const getValue = await contract.calcuValue(orderType, claimlevel);
+      console.log(getValue, 'getValue')
       console.log(getValue.toNumber(), "claimlevel");
       console.log(address, orderType, claimlevel);
       const tx = await contract.deposit(
@@ -137,7 +138,6 @@ const PricingSections = ({ level }) => {
       message.error("Deposit transaction failed.");
     }
 
-    // TODO: payment = coverage * rate
   };
 
   const handleModalCancel = () => {

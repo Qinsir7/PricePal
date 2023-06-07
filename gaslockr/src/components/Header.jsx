@@ -135,11 +135,11 @@ const Header = () => {
             )}
             <div className="ml-4">
               <Select
-                defaultValue="Scroll"
+                defaultValue="Polygon"
                 style={{ width: 120 }}
                 onChange={handleChange}
               >
-                <Option value="scroll">Scroll</Option>
+                <Option value="Polygon">Polygon</Option>
               </Select>
             </div>
           </div>

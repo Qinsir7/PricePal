@@ -151,10 +151,6 @@ const PricingSections = ({ level }) => {
           <h2 className="text-3xl text-emerald-500 font-semibold tracking-wide uppercase">
             Gas Insure
           </h2>
-          <p className="mt-4 max-w-4xl text-xl text-gray-500 lg:mx-auto">
-            GasInsure is the first insurance service for gas prices designed for
-            L2's. It is built on top of the GasLockR protocol.
-          </p>
         </div>
 
         <div className="mt-10">

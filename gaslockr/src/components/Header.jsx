@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Select } from "antd";
 import { Modal } from "antd";
-import logo from "../assets/logo.jpg"
+import logo from "../assets/logo.png"
 import useWeb3Provider from "./hooks/useWeb3Provider";
 
 const { Option } = Select;
@@ -103,17 +103,19 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-indigo-500">
+    <header >
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           <div onClick={goToHome} className="cursor-pointer">
-            <h1 className="text-white text-2xl font-bold">GasLockR</h1>
+            <div className="flex justify-center items-center">
+              <img className="h-12" src={logo} alt="" />
+            </div>
           </div>
           <div className="flex items-center">
             {isConnected && (
               <button
                 onClick={onClaimNow}
-                className="ml-4 bg-indigo-500 text-white rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+                className="ml-4 bg-emerald-500 text-white rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-emerald-600 focus:outline-none focus:shadow-outline"
               >
                 Claim Now
               </button>
@@ -121,14 +123,14 @@ const Header = () => {
             {!isConnected ? (
               <button
                 onClick={onConnectWallet}
-                className="ml-4 bg-indigo-500 text-white rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+                className="ml-4 bg-emerald-500 text-white rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-emerald-600 focus:outline-none focus:shadow-outline"
               >
                 Connect Wallet
               </button>
             ) : (
               <button
                 onClick={handleDisconnect}
-                className="ml-4 bg-indigo-500 text-white rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+                className="ml-4 bg-emerald-500 text-white rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-emerald-600 focus:outline-none focus:shadow-outline"
               >
                 {displayAddress(walletAddress)}
               </button>

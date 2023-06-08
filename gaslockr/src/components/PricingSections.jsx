@@ -148,7 +148,7 @@ const PricingSections = ({ level }) => {
     <div className="py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-3xl text-indigo-600 font-semibold tracking-wide uppercase">
+          <h2 className="text-3xl text-emerald-500 font-semibold tracking-wide uppercase">
             Gas Insure
           </h2>
           <p className="mt-4 max-w-4xl text-xl text-gray-500 lg:mx-auto">
@@ -176,7 +176,7 @@ const PricingSections = ({ level }) => {
                     )}
                   </div>
                   <div className="text-center mt-2">
-                    <span className="text-5xl font-bold text-indigo-600">
+                    <span className="text-5xl font-bold text-emerald-500">
                       {plan.price}
                     </span>
                   </div>
@@ -185,13 +185,13 @@ const PricingSections = ({ level }) => {
                   {/* min fluctuation */}
                   <div className="text-center mt-6">
                     Max Coverage:
-                    <span className="ml-2 font-semibold text-indigo-600">
+                    <span className="ml-2 font-semibold text-emerald-500">
                       {plan.maxCoverage} ETH
                     </span>
                   </div>
                   <div className="text-center mt-2">
                     Min Fluctuation:
-                    <span className="ml-2 font-semibold text-indigo-600">
+                    <span className="ml-2 font-semibold text-emerald-500">
                       {plan.minFluctuation}
                     </span>
                   </div>
@@ -205,7 +205,7 @@ const PricingSections = ({ level }) => {
                   </ul>
                   <button
                     onClick={() => handleGetStarted(plan)}
-                    className="mt-8 w-full bg-indigo-600 text-white py-2 px-4 rounded-md font-semibold"
+                    className="mt-8 w-full bg-emerald-500 text-white py-2 px-4 rounded-md font-semibold"
                   >
                     Get Started
                   </button>

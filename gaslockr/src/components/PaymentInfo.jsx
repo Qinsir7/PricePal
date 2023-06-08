@@ -11,7 +11,7 @@ const PaymentInfo = ({ rate, amount }) => {
     <div className="mt-4 ml-14">
       <p className="text-lg text-gray-700">
         The actual fee paid is:
-        <span className="text-2xl text-indigo-600 font-bold ml-2">
+        <span className="text-2xl text-emerald-500 font-bold ml-2">
           {actualPayment}
         </span>
       </p>

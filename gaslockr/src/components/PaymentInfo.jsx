@@ -1,6 +1,11 @@
 import React from "react";
+import useForecast from "./hooks/useForecast";
 
 const PaymentInfo = ({ rate, amount }) => {
+
+  const { forecastData } = useForecast();
+  console.log(forecastData, 'forecastData')
+
   const calculateActualPayment = () => {
     // 这里是根据 rate 和 amount 计算实际支付费用的逻辑
     // 返回计算后的实际支付费用

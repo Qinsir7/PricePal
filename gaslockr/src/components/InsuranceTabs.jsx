@@ -1,19 +1,11 @@
 import React, { useState } from "react";
 import { Tabs } from "antd";
 import PricingSections from "./PricingSections";
-import useForecast from "./hooks/useForecast";
 
 const { TabPane } = Tabs;
 
 const InsuranceTabs = () => {
   const [activeKey, setActiveKey] = useState("normal");
-
-  const { forecastData, isLoading, error } = useForecast();
-  console.log(forecastData, 'forecastData')
-
-  if (error) {
-    console.log(error.message, 'error.message')
-  }
 
   const handleTabChange = (key) => {
     setActiveKey(key);

@@ -55,7 +55,7 @@ const Header = () => {
 
       const signature = await provider
         .getSigner(account)
-        .signMessage("GasLockR Authentication");
+        .signMessage("PricePal Authentication");
       setIsConnected(true);
       setWalletAddress(account);
 
@@ -69,7 +69,7 @@ const Header = () => {
           const newAccount = accounts[0];
           const newSignature = await provider
             .getSigner(newAccount)
-            .signMessage("GasLockR Authentication");
+            .signMessage("PricePal Authentication");
           setIsConnected(true);
           setWalletAddress(newAccount);
 

@@ -44,7 +44,7 @@ const ExpectedReturnsChart = ({ rateData, amountData }) => {
   return (
     <ReactECharts
       option={getOption()}
-      style={{ height: "350px", width: "100%" }}
+      style={{ height: "350px", width: "752px" }}
       opts={{ renderer: "canvas" }}
     />
   );

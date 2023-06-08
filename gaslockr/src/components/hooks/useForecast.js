@@ -30,7 +30,7 @@ const useForecast = () => {
                     if (err) {
                         setError(err);
                     } else {
-                        setForecastData(data);
+                        setForecastData(data.Forecast.Predictions.p10);
                     }
                     setIsLoading(false);
                 });

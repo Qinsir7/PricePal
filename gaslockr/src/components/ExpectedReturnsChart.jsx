@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactECharts from "echarts-for-react";
 
 const ExpectedReturnsChart = ({ rateData, amountData }) => {

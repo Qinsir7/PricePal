@@ -1,22 +1,20 @@
-const axios = require('axios');
 const ethers = require('ethers');
 const moment = require('moment');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
-// 创建CSV writer
 const csvWriter = createCsvWriter({
     path: 'gas_price.csv',
     header: [
-        {id: 'item_id', title: 'item_id'},
-        {id: 'timestamp', title: 'timestamp'},
-        {id: 'target_value', title: 'target_value'},
+        { id: 'item_id', title: 'item_id' },
+        { id: 'timestamp', title: 'timestamp' },
+        { id: 'target_value', title: 'target_value' },
     ]
 });
 
 async function fetchGasPrices() {
     const provider = new ethers.providers.JsonRpcProvider('https://mainnet.infura.io/v3/fbd1cd3ce9494434ac35c07bac0e4e74');
     const currentBlockNumber = await provider.getBlockNumber();
-    const blocksPerDay = 10;  // 一个大概的每日区块数量
+    const blocksPerDay = 10;
     const days = 2048;
 
     for (let i = 0; i < days; i++) {

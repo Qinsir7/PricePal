@@ -172,7 +172,7 @@ const PricingSections = ({ level }) => {
                     )}
                   </div>
                   <div className="text-center mt-2">
-                    <span className="text-5xl font-bold text-emerald-500">
+                    <span className="text-5xl font-bold whitespace-nowrap text-emerald-500">
                       {plan.price}
                     </span>
                   </div>

@@ -9,8 +9,8 @@ const Home = () => {
             <section data-section-id="1" data-share="" data-category="features-white-pattern" data-component-id="79798086_01_awz" className="py-24 md:pb-32 bg-white" data-config-id="auto-img-1">
                 <div className="container px-4 mx-auto">
                     <div className="md:max-w-4xl mb-12 mx-auto text-center">
-                        <h1 className="mb-4 text-3xl md:text-4xl leading-tight font-bold tracking-tighter" data-config-id="auto-txt-2-1">Gain more insight into how people use your</h1>
-                        <p className="text-lg md:text-xl text-coolGray-500 font-medium" data-config-id="auto-txt-3-1">With our integrated CRM, project management, collaboration and invoicing capabilities, you can manage every aspect of your business in one secure platform.</p>
+                        <h1 className="mb-4 text-3xl md:text-4xl leading-tight font-bold tracking-tighter" data-config-id="auto-txt-2-1">GasInsure for ChainLink Hackathon</h1>
+                        <p className="text-lg md:text-xl text-coolGray-500 font-medium" data-config-id="auto-txt-3-1">GasInsure offers wide protection against gas price volatility. Trust in our automated, on-chain claims handling. Customize your insurance period and amount with a small premium. Secure and tailor-made blockchain insurance solutions at your fingertips with GasInsure.</p>
                     </div>
 
                     <div className='flex justify-center items-center mb-20'>
